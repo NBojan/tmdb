@@ -13,7 +13,7 @@ const MenuLink = ({
   };
 }) => {
   const searchParams = useSearchParams();
-  const genre = searchParams.get("genre");
+  const genre = searchParams?.get("genre");
 
   return (
     <Link
