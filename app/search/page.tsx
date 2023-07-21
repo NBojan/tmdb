@@ -1,6 +1,12 @@
 import axios from "axios";
+import type { Metadata } from 'next'
 import { MovieList } from "@/app/components";
 import { options, url } from "@/utils/forFetching";
+
+export const metadata: Metadata = {
+  title: 'Search - NB Movies - TMDB',
+  description: 'Search for movies, trending, top rated, your favourites...'
+}
 
 const getMovies = async (searchTerm: string) => {
   const response = await axios(

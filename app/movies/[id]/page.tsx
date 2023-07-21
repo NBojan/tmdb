@@ -1,7 +1,12 @@
 import axios from "axios";
 import placeholder from "@/utils/placeholder.jpg";
+import type { Metadata } from 'next'
 import { url, options } from "@/utils/forFetching";
 
+export const metadata: Metadata = {
+  title: 'Movie - NB Movies - TMDB',
+  description: 'Movie Page NB Movies, TMDB, Search for movies, trending, top rated, your favourites...',
+}
 const imgUrl = "https://image.tmdb.org/t/p/original";
 
 const getMovie = async (id: string) => {

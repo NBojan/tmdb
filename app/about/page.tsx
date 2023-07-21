@@ -1,3 +1,10 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About - NB Movies - TMDB',
+  description: 'About NB Movies, TMDB, Search for movies, trending, top rated, your favourites...',
+}
+
 const About = () => {
   return (
     <section className="py-8">
