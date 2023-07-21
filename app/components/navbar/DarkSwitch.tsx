@@ -2,15 +2,17 @@
 import { useEffect, useState } from "react";
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 
-const savedTheme = localStorage.getItem("theme") || "light";
-
 const DarkSwitch = () => {
-    const [theme, setTheme] = useState(savedTheme);
+    const [theme, setTheme] = useState("light");
 
     const handleTheme = () => {
         if(theme === "light") return setTheme("dark")
         else return setTheme("light");
     }
+
+    useEffect(() => {
+        setTheme(localStorage.getItem("theme") || "light");
+    }, [])
 
     useEffect(() => {
         localStorage.setItem("theme", theme);
